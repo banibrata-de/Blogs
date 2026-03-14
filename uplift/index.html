@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uplift — Making Teen Learning Visible</title>
+  <meta name="description" content="How a local recording agent and cloud-based analysis pipeline transforms invisible teen learning moments into structured, shareable insights without the friction of parental feedback." />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://banibrata-de.github.io/personal/Blogs/uplift/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Uplift — Making Teen Learning Visible" />
+  <meta property="og:description" content="How a local recording agent and cloud-based analysis pipeline transforms invisible teen learning moments into structured, shareable insights without the friction of parental feedback." />
+  <meta property="og:url" content="https://banibrata-de.github.io/personal/Blogs/uplift/" />
+  <meta property="og:image" content="https://banibrata-de.github.io/personal/Blogs/uplift/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Uplift social preview card showing a local recording agent, analysis pipeline, and sample report concept" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Uplift" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Uplift — Making Teen Learning Visible" />
+  <meta name="twitter:description" content="How a local recording agent and cloud-based analysis pipeline transforms invisible teen learning moments into structured, shareable insights." />
+  <meta name="twitter:image" content="https://banibrata-de.github.io/personal/Blogs/uplift/social-preview.png" />
+  <meta name="twitter:image:alt" content="Uplift social preview card showing a local recording agent, analysis pipeline, and sample report concept" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ─── Skip link ─────────────────────────────────────────────── -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ─── Header / Nav ─────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <span class="site-logo" aria-label="Uplift">Uplift</span>
+      <nav aria-label="Page sections">
+        <ul class="nav-list">
+          <li><a href="#challenge">Challenge</a></li>
+          <li><a href="#architecture">How It Works</a></li>
+          <li><a href="#insights">Sample Insights</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── Main ─────────────────────────────────────────────────── -->
+  <main id="main">
+
+    <!-- 1. Hero ──────────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Applied AI · Parenting Tech · Learning Analytics</p>
+          <h1 id="hero-heading">
+            Making Teen Learning<br />
+            <span class="accent">Visible</span>
+          </h1>
+          <p class="hero-sub">
+            Parents want to help. Teens want autonomy. The gap between them doesn't have to be
+            a fight. A lightweight local recording agent, a speech and multimodal analysis
+            pipeline, and a clean shareable report turn invisible study sessions into
+            neutral, evidence based conversations. The goal is not surveillance; it is a
+            transparent feedback loop that helps the learner improve in future classes.
+          </p>
+          <p class="hero-audience">
+            Useful for parents, tutors, learning platform builders, and teams exploring
+            privacy first feedback systems where owning the underlying data matters.
+          </p>
+          <p class="hero-audience">
+            This project is rooted in a real family context, and I hope its next phase becomes
+            increasingly learner shaped rather than parent defined.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#architecture" class="btn btn-primary">See How It Works</a>
+            <a href="#insights" class="btn btn-ghost">View Sample Report</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="pipeline-diagram">
+            <div class="pipe-node pipe-local">
+              <span class="pipe-icon">🎙️</span>
+              <span class="pipe-label">Local<br/>Agent</span>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-node pipe-cloud">
+              <span class="pipe-icon">☁️</span>
+              <span class="pipe-label">Analysis<br/>Pipeline</span>
+            </div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-node pipe-report">
+              <span class="pipe-icon">📊</span>
+              <span class="pipe-label">Shareable<br/>Report</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Challenge ────────────────────────────────────────────── -->
+    <section id="challenge" class="section section-light" aria-labelledby="challenge-heading">
+      <div class="container">
+        <div class="section-label">The Problem</div>
+        <h2 id="challenge-heading">Why Feedback Gets Hard at Home</h2>
+        <div class="challenge-grid">
+          <div class="challenge-card reveal">
+            <div class="card-icon" aria-hidden="true">💬</div>
+              <h3>Why Direct Feedback Can Trigger Resistance</h3>
+              <p>
+                Ask a teenager how studying is going and you'll often get a shrug. Not because
+                they don't care but because direct feedback at home can quickly collide
+                with autonomy, emotion, and defensiveness before any real exchange can happen.
+              </p>
+          </div>
+          <div class="challenge-card reveal">
+            <div class="card-icon" aria-hidden="true">🔍</div>
+            <h3>Learning Is Invisible by Default</h3>
+            <p>
+              Without artifacts, a study session produces nothing observable. Parents fill
+              the gap with assumptions; learners miss the chance to reflect. Good work goes
+              unrecognized; struggle patterns go uncorrected.
+            </p>
+          </div>
+          <div class="challenge-card reveal">
+            <div class="card-icon" aria-hidden="true">🔄</div>
+            <h3>Neutral Observation Changes Everything</h3>
+            <p>
+              When a third party even a machine offers observations, the dynamic
+              shifts from accusation to curiosity. "The report says you spent 40% of
+              the session re-reading the same paragraph" lands differently than
+              "you're not retaining anything."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Architecture ─────────────────────────────────────────── -->
+    <section id="architecture" class="section section-dark" aria-labelledby="arch-heading">
+      <div class="container">
+        <div class="section-label">How It Works</div>
+        <h2 id="arch-heading">The Integrated Flow</h2>
+        <p class="section-intro">
+          The system is designed end-to-end from the moment a learner sits down to
+          study, to the moment a parent opens a one-page report. Each step is deliberate;
+          each handoff is structured and reviewable.
+        </p>
+        <p class="section-intro">
+          It also points toward a broader research direction: learner-specific multimodal
+          feedback systems that can eventually be adapted, fine-tuned, or even deployed
+          locally when privacy, control, or specialized use cases demand it.
+        </p>
+
+        <ol class="flow-steps" aria-label="System flow steps">
+          <li class="flow-step reveal">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-body">
+              <h3>Local Recording Agent</h3>
+              <p>
+                A lightweight agent runs locally on the learner's device. With consent and
+                an explicit start trigger, it captures audio of the study session. Nothing
+                leaves the device until the learner ends the session and initiates upload.
+                The recording is framed clearly: this session is being captured to collect
+                feedback and help the learner succeed in future classes. The agent stores a
+                compact, session-scoped artifact only no continuous background monitoring.
+              </p>
+              <ul class="step-details">
+                <li>Explicit start/stop control by the learner</li>
+                <li>Session scoped capture; no persistent local storage</li>
+                <li>Encrypted artifact for upload</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="flow-step reveal">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-body">
+              <h3>Speech &amp; Multimodal Analysis Pipeline</h3>
+              <p>
+                The encrypted artifact is processed through a cloud-based pipeline that
+                performs transcription, topic segmentation, engagement modeling, and
+                fluency analysis. The pipeline is orchestrated as a series of discrete,
+                auditable stages, each with its own input/output contract.
+              </p>
+              <ul class="step-details">
+                <li>Automatic speech recognition with speaker diarization</li>
+                <li>Topic and concept extraction</li>
+                <li>Engagement and fluency scoring</li>
+                <li>Structured JSON output per session</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="flow-step reveal">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-body">
+              <h3>Report Generation</h3>
+              <p>
+                The pipeline output is rendered into a clean, human-readable report. The
+                report is designed for a parent-and-teen review moment, not a grade, not
+                a reprimand a shared artifact that opens a conversation. It surfaces
+                patterns, not judgments.
+              </p>
+              <ul class="step-details">
+                <li>One-page summary with plain-language narrative</li>
+                <li>Metric visualization (time distribution, topic coverage, fluency)</li>
+                <li>Sample transcript excerpts with timestamps</li>
+                <li>Shareable link or PDF export</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="arch-diagram reveal" aria-label="Architecture overview diagram" role="img">
+          <div class="arch-row">
+            <div class="arch-box arch-local">
+              <div class="arch-box-title">Learner Device</div>
+              <div class="arch-box-item">🎙 Recording Agent</div>
+              <div class="arch-box-item">🔒 Local Encryption</div>
+              <div class="arch-box-item arch-trigger">⬆ Upload on consent</div>
+            </div>
+            <div class="arch-connector" aria-hidden="true">
+              <div class="connector-line"></div>
+              <div class="connector-label">HTTPS / encrypted</div>
+            </div>
+            <div class="arch-box arch-pipeline">
+              <div class="arch-box-title">Analysis Pipeline</div>
+              <div class="arch-box-item">📝 Transcription</div>
+              <div class="arch-box-item">🏷 Topic Extraction</div>
+              <div class="arch-box-item">📈 Engagement Model</div>
+            </div>
+            <div class="arch-connector" aria-hidden="true">
+              <div class="connector-line"></div>
+              <div class="connector-label">Structured JSON</div>
+            </div>
+            <div class="arch-box arch-report-box">
+              <div class="arch-box-title">Report Engine</div>
+              <div class="arch-box-item">📊 Visualization</div>
+              <div class="arch-box-item">📄 PDF / Link</div>
+              <div class="arch-box-item arch-trigger">👨‍👩‍👦 Shared review</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Sample Insights ──────────────────────────────────────── -->
+    <section id="insights" class="section section-light" aria-labelledby="insights-heading">
+      <div class="container">
+        <div class="section-label">Sample Report</div>
+        <h2 id="insights-heading">What a Session Report Looks Like</h2>
+
+        <div class="demo-disclaimer" role="note" aria-label="Demo data disclaimer">
+          <span class="disclaimer-icon" aria-hidden="true">⚠️</span>
+          <strong>Demo Data Notice:</strong> All names, metrics, transcript excerpts, and
+          report content below are entirely <em>synthetic, representative examples</em>.
+          This is not real learner data. No actual recording or analysis has been
+          performed. These visuals exist solely to illustrate the report format.
+        </div>
+
+        <div class="report-card reveal" aria-label="Sample report card — demo data only">
+
+          <div class="report-header">
+            <div class="report-meta">
+              <div class="report-title-block">
+                <h3 class="report-name">Sample Learner · Alex</h3>
+                <p class="report-subtitle">Session Report · <em>Demo Data — Not Real</em></p>
+              </div>
+              <div class="report-badges">
+                <span class="badge badge-demo">📋 SAMPLE REPORT</span>
+                <span class="badge badge-subject">Subject: Biology</span>
+                <span class="badge badge-duration">Duration: 42 min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="report-body">
+
+            <!-- Metric bars -->
+            <div class="metric-section">
+              <h4 class="metric-heading">Session Metrics <span class="demo-tag">Demo</span></h4>
+              <div class="metric-grid">
+                <div class="metric-item">
+                  <div class="metric-label">
+                    <span>Focused engagement</span>
+                    <span class="metric-value" data-value="72">0%</span>
+                  </div>
+                  <div class="metric-bar-track" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Focused engagement 72%">
+                    <div class="metric-bar" data-target="72" style="--target: 72%"></div>
+                  </div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-label">
+                    <span>Verbal fluency score</span>
+                    <span class="metric-value" data-value="68">0%</span>
+                  </div>
+                  <div class="metric-bar-track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Verbal fluency score 68%">
+                    <div class="metric-bar" data-target="68" style="--target: 68%"></div>
+                  </div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-label">
+                    <span>Topic coverage breadth</span>
+                    <span class="metric-value" data-value="55">0%</span>
+                  </div>
+                  <div class="metric-bar-track" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="Topic coverage breadth 55%">
+                    <div class="metric-bar" data-target="55" style="--target: 55%"></div>
+                  </div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-label">
+                    <span>Concept retrieval accuracy</span>
+                    <span class="metric-value" data-value="81">0%</span>
+                  </div>
+                  <div class="metric-bar-track" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100" aria-label="Concept retrieval accuracy 81%">
+                    <div class="metric-bar" data-target="81" style="--target: 81%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Time distribution -->
+            <div class="time-section">
+              <h4 class="metric-heading">Time Distribution <span class="demo-tag">Demo</span></h4>
+              <div class="time-bar" aria-label="Session time distribution">
+                <div class="time-segment seg-active" style="width:38%" title="Active recall: 38%">
+                  <span class="seg-label">Active recall<br/>38%</span>
+                </div>
+                <div class="time-segment seg-review" style="width:29%" title="Review / re-reading: 29%">
+                  <span class="seg-label">Re-reading<br/>29%</span>
+                </div>
+                <div class="time-segment seg-passive" style="width:19%" title="Passive listening: 19%">
+                  <span class="seg-label">Passive<br/>19%</span>
+                </div>
+                <div class="time-segment seg-off" style="width:14%" title="Off-task: 14%">
+                  <span class="seg-label">Off-task<br/>14%</span>
+                </div>
+              </div>
+              <div class="time-legend" aria-hidden="true">
+                <span class="legend-item"><span class="dot dot-active"></span>Active recall</span>
+                <span class="legend-item"><span class="dot dot-review"></span>Re-reading</span>
+                <span class="legend-item"><span class="dot dot-passive"></span>Passive</span>
+                <span class="legend-item"><span class="dot dot-off"></span>Off-task</span>
+              </div>
+            </div>
+
+            <!-- Transcript excerpt -->
+            <div class="transcript-section">
+              <h4 class="metric-heading">Transcript Excerpts <span class="demo-tag">Demo — Synthetic</span></h4>
+              <div class="transcript-note" aria-label="Transcript disclaimer">
+                <em>The following text is entirely fabricated for illustration purposes.
+                No real speech was transcribed.</em>
+              </div>
+              <div class="transcript-block">
+                <div class="transcript-turn turn-learner">
+                  <span class="turn-time">08:14</span>
+                  <span class="turn-speaker">Alex</span>
+                  <p>"Okay so… mitosis is when a cell;  wait, no, that's meiosis. Mitosis
+                  is for growth, and meiosis is for… reproduction. And they each have
+                  like four stages, right? Prophase, metaphase, anaphase, telophase."</p>
+                </div>
+                <div class="transcript-tag tag-strong">
+                  ✅ Correct self-correction — concept discrimination improving
+                </div>
+
+                <div class="transcript-turn turn-learner">
+                  <span class="turn-time">23:47</span>
+                  <span class="turn-speaker">Alex</span>
+                  <p>"I keep forgetting what crossing over actually does. It's something
+                  about genetic variation but I can't explain it properly yet."</p>
+                </div>
+                <div class="transcript-tag tag-flag">
+                  📌 Identified gap: crossing over / genetic variation — revisit recommended
+                </div>
+
+                <div class="transcript-turn turn-learner">
+                  <span class="turn-time">38:22</span>
+                  <span class="turn-speaker">Alex</span>
+                  <p>"Alright, so if I had to explain meiosis to someone who'd never heard
+                  of it… I'd say it's how the body makes sex cells with half the normal
+                  number of chromosomes so that when they combine you get the right number."</p>
+                </div>
+                <div class="transcript-tag tag-strong">
+                  ✅ Strong explanatory summary — good retention at session end
+                </div>
+              </div>
+            </div>
+
+            <!-- Narrative insight -->
+            <div class="narrative-section">
+              <h4 class="metric-heading">Session Narrative <span class="demo-tag">Demo</span></h4>
+              <blockquote class="narrative-quote">
+                "Alex demonstrated solid active recall during the first and final thirds of
+                the session. The middle segment showed significant re-reading, suggesting
+                a comprehension barrier around genetic variation. Self-correction frequency
+                was above average, a strong indicator of meta-cognitive awareness. Recommend
+                a focused retrieval-practice block on crossing over and chromosome behavior
+                in meiosis II before the next session."
+              </blockquote>
+            </div>
+
+          </div><!-- /report-body -->
+        </div><!-- /report-card -->
+
+        <p class="insights-footer-note">
+          ⚠️ All figures, names, topics, and transcript text above are <strong>synthetic demo content</strong>.
+          They represent the format only, not any real learner's data.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- 5. Planning & Approach ──────────────────────────────────── -->
+    <section id="approach" class="section section-dark" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="section-label">Build Philosophy</div>
+        <h2 id="approach-heading">Planning as a First-Class Deliverable</h2>
+        <p class="section-intro">
+          The best technical work starts before the first line of code. Uplift was designed
+          with an explicit planning phase that informed every architectural decision from
+          data flow to the learner consent model.
+        </p>
+
+        <div class="approach-grid">
+          <div class="approach-card reveal">
+            <div class="approach-icon" aria-hidden="true">🗺️</div>
+            <h3>Define the Artefact First</h3>
+            <p>
+              The report format was designed before the pipeline. Working backwards from
+              "what does a useful parent–teen report look like?" drove every upstream
+              decision: what to capture, what to analyze, what to surface.
+            </p>
+          </div>
+          <div class="approach-card reveal">
+            <div class="approach-icon" aria-hidden="true">🔗</div>
+            <h3>Integrated, Not Bolted On</h3>
+            <p>
+              Recording, transcription, analysis, and rendering are treated as a single
+              flow with explicit contracts at each boundary, not a collection of
+              loosely connected scripts. Each stage is independently testable.
+            </p>
+          </div>
+          <div class="approach-card reveal">
+            <div class="approach-icon" aria-hidden="true">🧪</div>
+              <h3>Validate with Realistic Sessions</h3>
+              <p>
+                Early versions were refined against realistic pilot scenarios and
+                representative session patterns. The goal was to ground the report
+                format in observable study behaviors rather than theoretical
+                benchmarks. Revision cycles were short and purposeful.
+              </p>
+          </div>
+          <div class="approach-card reveal">
+            <div class="approach-icon" aria-hidden="true">🛡️</div>
+            <h3>Privacy as Architecture</h3>
+            <p>
+              Consent, local-first capture, and minimal data retention are not features
+              bolted on at the end they are structural constraints that shaped
+              every technical decision from day one.
+            </p>
+          </div>
+          <div class="approach-card reveal">
+            <div class="approach-icon" aria-hidden="true">📡</div>
+            <h3>Own the Raw Signal</h3>
+            <p>
+              Part of the build philosophy was avoiding black-box lock-in. Keeping access
+              to the underlying signal makes it possible to preserve nuance e.g., volume,
+              pacing, modulation, hesitation, and other subtle patterns that matter when
+              the feedback model evolves over time.
+            </p>
+          </div>
+          <div class="approach-card reveal">
+            <div class="approach-icon" aria-hidden="true">🧠</div>
+            <h3>Research Path, Not Just Product Path</h3>
+            <p>
+              Beyond the immediate reporting workflow, the project opens a research direction:
+              how learner-specific voice and video signals might support more adaptive models.
+              In the long run, that could mean fine-tuned systems, richer personalization,
+              and privacy-sensitive deployments that run closer to the learner.
+            </p>
+          </div>
+        </div>
+
+        <div class="roadmap-section reveal">
+          <h3 class="roadmap-title">What's Next</h3>
+          <p class="roadmap-note">
+            The following items are on the design roadmap and have not yet been shipped.
+          </p>
+          <ul class="roadmap-list">
+            <li>
+              <span class="roadmap-status status-planned">Planned</span>
+              Longitudinal dashboard — session-over-session trend visualization
+            </li>
+            <li>
+              <span class="roadmap-status status-planned">Planned</span>
+              Learner-facing progress feed — self-directed reflection prompts
+            </li>
+            <li>
+              <span class="roadmap-status status-exploring">Exploring</span>
+              Subject-specific concept graph — mapping coverage against curriculum nodes
+            </li>
+            <li>
+              <span class="roadmap-status status-exploring">Exploring</span>
+              Tutor integration — sharing reports with educators, with learner consent
+            </li>
+            <li>
+              <span class="roadmap-status status-exploring">Exploring</span>
+              Learner-adapted multimodal models — fine-tuned or locally deployable options
+              for privacy-sensitive and advanced use cases
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Privacy & Disclaimer ─────────────────────────────────── -->
+    <section id="privacy" class="section section-light" aria-labelledby="privacy-heading">
+      <div class="container">
+        <div class="section-label">Privacy &amp; Ethics</div>
+        <h2 id="privacy-heading">Data Principles</h2>
+        <p class="section-intro">
+          A tool that observes how a teenager learns carries a significant responsibility.
+          These are the design principles intended to govern how Uplift handles data.
+        </p>
+
+        <div class="principles-grid">
+          <div class="principle reveal">
+            <div class="principle-icon" aria-hidden="true">✋</div>
+            <h3>Explicit Consent, Every Session</h3>
+            <p>Recording is never automatic. The learner initiates each session
+             deliberately. There is no background monitoring, no persistent
+             audio capture, and no data collection outside the explicit
+             session window. The purpose is stated up front: collect feedback,
+             reflect on the session, and support stronger performance in future classes.</p>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon" aria-hidden="true">🔐</div>
+            <h3>Local Capture, Explicit Upload</h3>
+            <p>Audio is captured by a local recording agent on the learner's device.
+            It moves into cloud-based processing only when the learner explicitly
+            ends and submits the session. The learner can review or delete a
+            session artifact before upload.</p>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon" aria-hidden="true">🗑️</div>
+            <h3>Minimal Retention</h3>
+            <p>The design target is minimal retention. The pipeline keeps the
+            smallest useful set of derived artifacts for reflection and is
+            intended to discard source recordings after processing. Retention
+            preferences should remain configurable at the household level.</p>
+          </div>
+          <div class="principle reveal">
+            <div class="principle-icon" aria-hidden="true">👁️</div>
+            <h3>Learner Visibility</h3>
+            <p>The learner sees everything the parent sees. Reports are
+            not delivered privately to parents they are a shared artifact.
+            The system is designed to support dialogue, not surveillance.</p>
+          </div>
+        </div>
+
+        <div class="demo-disclaimer demo-disclaimer-large" role="note">
+          <h3>Demo &amp; Synthetic Data Disclaimer</h3>
+          <p>
+            All sample reports, metric figures, transcript excerpts, learner names, and
+            visualizations presented on this page are <strong>entirely synthetic</strong>.
+            They are representative examples created to illustrate the format and capability
+            of the system. They do not represent any real learner, real session, real
+            recording, or real analytical output.
+          </p>
+          <p>
+            No personal data, audio recordings, or identifiable information of any individual
+            has been used in the creation of this page.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Call to Action ───────────────────────────────────────── -->
+    <section id="cta" class="section section-cta" aria-labelledby="cta-heading">
+      <div class="container cta-inner">
+        <h2 id="cta-heading">If This Resonates</h2>
+        <p class="cta-sub">
+          If you're exploring privacy-first learning tools, owned-data AI systems,
+          or thoughtful feedback experiences for learners, I'd be glad to connect
+          and exchange ideas.
+        </p>
+        <p class="cta-contact-note">
+          The contact point for this page goes to my personal LinkedIn profile, keeping
+          the conversation on a personal channel rather than anything employer-linked.
+        </p>
+        <div class="cta-buttons">
+          <a href="#architecture" class="btn btn-primary btn-large">
+            Revisit the Flow
+          </a>
+          <a href="https://www.linkedin.com/in/banibrata/" class="btn btn-ghost btn-large" target="_blank" rel="noreferrer" data-telemetry-event="cta_click" data-telemetry-section="cta">
+            Let&rsquo;s Connect
+          </a>
+          <a href="#hero-heading" class="btn btn-ghost btn-large">
+            Back to Top
+          </a>
+        </div>
+        <p class="cta-footer">
+          Built with plain HTML, CSS &amp; JavaScript for a concise, privacy-aware
+          storytelling page. No frameworks, no trackers, no external dependencies.
+          &copy; <span id="year"></span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ───────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-note">
+        Uplift is a personal project. Views and designs are the author's own.
+        All demo content is synthetic. No real learner data is stored or displayed.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    window.BLOG_TELEMETRY_CONFIG = {
+      proxyUrl:    'https://uplift-telemetry-fn.azurewebsites.net/api/track',
+      blogSlug:    'uplift',
+      blogTitle:   'Uplift — Making Teen Learning Visible',
+      environment: 'production'
+    };
+  </script>
+  <script src="../shared/app-insights.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
