@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognitive Sidecar: Your AI Assistant's Long-Term Memory</title>
+  <meta name="description" content="How I built a portable, self-hosted memory service that maps to human cognitive architecture : and what it taught me about my own engineering patterns." />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://banibrata-de.github.io/Blogs/cognitive-sidecar/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cognitive Sidecar: Your AI Assistant's Long-Term Memory" />
+  <meta property="og:description" content="How I built a portable, self-hosted memory service that maps to human cognitive architecture and what it taught me about my own engineering patterns." />
+  <meta property="og:url" content="https://banibrata-de.github.io/Blogs/cognitive-sidecar/" />
+  <meta property="og:image" content="https://banibrata-de.github.io/Blogs/cognitive-sidecar/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cognitive Sidecar: a three-layer memory architecture for AI assistants" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Cognitive Sidecar" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cognitive Sidecar: Your AI Assistant's Long-Term Memory" />
+  <meta name="twitter:description" content="How I built a portable, self-hosted memory service that maps to human cognitive architecture and what it taught me about my own engineering patterns." />
+  <meta name="twitter:image" content="https://banibrata-de.github.io/Blogs/cognitive-sidecar/social-preview.png" />
+  <meta name="twitter:image:alt" content="Cognitive Sidecar :  a three-layer memory architecture for AI assistants" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <main id="main">
+    <article class="article-wrapper">
+
+      <!-- ─── Header ──────────────────────────────────────────── -->
+      <header class="article-header">
+        <h1 class="article-title">Cognitive Sidecar</h1>
+        <p class="article-subtitle">Your AI assistant's long-term memory is a portable, self-hosted system that maps to human cognitive architecture.</p>
+        <div class="article-meta">
+          <a href="https://www.linkedin.com/in/banibrata/" target="_blank" rel="noreferrer">Banibrata</a>
+          <span class="meta-separator">·</span>
+          <span>April 2026</span>
+          <span class="meta-separator">·</span>
+          <span>5 min read</span>
+        </div>
+      </header>
+
+      <!-- ─── Lede ────────────────────────────────────────────── -->
+      <p>
+        Ever close 47 browser tabs at the end of a sprint and feel your brain
+        reset to factory settings? I built a cognitive sidecar: a self-hosted,
+        portable memory service that rides alongside my AI assistant,
+        remembering what my tools forget.
+      </p>
+
+      <p>
+        I built this for myself. Turns out the problems it solves are
+        universal.
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── The Problem ─────────────────────────────────────── -->
+      <h2>Why Developer Tools Only Give You Working Memory</h2>
+
+      <p>
+        Your IDE, terminal, and chat windows are designed to forget. Every
+        session starts from zero. The architecture decision from three weeks
+        ago? Gone. The debugging insight that saved six hours? Not indexed
+        anywhere. I call this <strong>context amnesia</strong>, and every
+        developer lives with it.
+      </p>
+
+      <p>
+        Then there's <strong>the Monday reset</strong>. Every week, you
+        reconstruct context from Teams/Slack threads, old PRs, and half-remembered
+        conversations. I think it's a structural problem: your tools have no long-term memory.
+      </p>
+
+      <p>
+        And even when context <em>is</em> captured in wikis, internal docs,
+        team notes ; it's <strong>locked to that system</strong>. Reorgs
+        happen, tools get swapped, teams restructure. The context you built
+        doesn't follow you. Your skills travel; your context doesn't.
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── The Model ───────────────────────────────────────── -->
+      <h2>Five Types of Memory, One System</h2>
+
+      <p>
+        There are distinct memory systems in the human brain : cognitive
+        science has mapped them pretty well. Most developer tools only tap
+        into one. So I built something that covers all five.
+      </p>
+
+      <p>
+        <strong>Working Memory </strong> is your IDE, terminal, and chat
+        window. It's ephemeral by design and that's fine. This is your
+        scratchpad, the "what am I doing right now?" layer.
+      </p>
+
+      <p>
+        <strong>Semantic Memory </strong> stores facts, preferences, and
+        patterns searchable by meaning, not just keywords. "I prefer
+        identity-based auth over shared keys" lives here.
+      </p>
+
+      <p>
+        <strong>Episodic Memory </strong> records dated events and
+        decisions the "when and why" of your engineering history. "On
+        March 4, I shipped the Neo4j sidecar with a reverse proxy."
+      </p>
+
+      <p>
+        <strong>Procedural Memory </strong> captures how-to workflows
+        and runbooks the muscle memory of your craft. "To deploy: run
+        <code>az containerapp update</code> with these flags."
+      </p>
+
+      <p>
+        <strong>Reflective Memory </strong> is the meta-layer: behavioral
+        patterns you didn't even know you had. "I'm a root-cause hunter, I
+        trace problems to protocol level before attempting fixes."
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── Architecture ────────────────────────────────────── -->
+      <h2>Three Layers, One Sidecar</h2>
+
+      <p>
+        The system is simple: three components, each with a
+        clear job, connected through standard APIs.
+      </p>
+
+      <h3>Semantic Memory</h3>
+      <p>
+        The first layer stores text memories as vector embeddings. Search by
+        meaning: "what do I know about identity-based auth?" finds related
+        memories across projects. Currently I have <strong>148 curated
+        memories</strong>.
+      </p>
+
+      <h3>Knowledge Graph</h3>
+      <p>
+        The second layer extracts entities and relationships automatically.
+        "Banibrata → designed → sidecar architecture → for → Neo4j" : built by
+        an LLM reading memories, not by manual entry. Currently:
+        <strong>779 nodes</strong> and <strong>686 edges</strong>.
+      </p>
+
+      <figure>
+        <img src="graph.png" alt="Knowledge graph visualization showing 779 nodes radiating from a central identity node, with relationship edges like 'values', 'focuses on', 'engages in'" />
+        <figcaption>The knowledge graph after 148 curated memories : 779 nodes connected by 686 relationship edges, radiating from a central identity node.</figcaption>
+      </figure>
+
+      <h3>Configuration Layer</h3>
+      <p>
+        The third layer is structured files the AI reads every session : project metadata, task tracking, governance rules. This is where the
+        system's personality and quality bar live.
+      </p>
+
+      <blockquote>
+        <p>
+          Why "sidecar"? In container architecture, a sidecar is a companion
+          process that handles cross-cutting concerns alongside your main
+          application. This memory service does the same, but for the
+          engineer, not the container.
+        </p>
+      </blockquote>
+
+   <h3>The Portability Constraint</h3>
+ <p>
+   Every memory passes one test: "Would this still be useful in a
+   completely different tech stack?" No vendor-specific IDs. No
+   platform-coupled schemas. Switch embedding providers by
+   re-embedding. Move clouds by running
+   <code>docker-compose up</code>. Export everything as one ZIP file.
+   Good systems don't create lock-in, for anyone.
+ </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── Insights ────────────────────────────────────────── -->
+      <h2>Patterns You Didn't Know You Had</h2>
+
+      <p>
+        After 26 coding sessions, the system analyzed cross-session patterns
+        and surfaced 12 personality insights. Not compliments : behavioral
+        observations backed by evidence. Here are five of them:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Root-Cause Hunter</strong> : traces problems to protocol
+          level before attempting fixes. Evidence: spent hours tracing an MCP
+          handshake failure to an ASGI mount issue instead of just retrying.
+        </li>
+        <li>
+          <strong>Builder Over Buyer</strong> : prefers creating
+          infrastructure over off-the-shelf tools. Evidence: built a custom
+          admin dashboard, a reverse proxy, and a Neo4j sidecar instead of
+          using managed services.
+        </li>
+        <li>
+          <strong>Systems Architect by Instinct</strong> : decomposes every
+          problem into layers before writing a line of code. Evidence:
+          designed a three-layer memory taxonomy before implementing anything.
+        </li>
+        <li>
+          <strong>Weekend Deep-Diver</strong> : best infrastructure work
+          happens in extended weekend sessions. Evidence: 46-turn coding
+          session on a Saturday, multi-day architecture sprint.
+        </li>
+        <li>
+          <strong>Security-Conscious by Default</strong>: first question for
+          any new service: "who can access this?" Evidence: added RBAC,
+          identity-based auth, and access restrictions to a personal project.
+        </li>
+      </ul>
+
+      <p>
+        The quality bar is simple: observed across two or more sessions,
+        phrased as behavior not flattery, backed by evidence, and free of
+        org-specific details. Not buzzwords, actual STAR stories
+        with a paper trail.
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── Lessons ─────────────────────────────────────────── -->
+      <h2>What I'd Tell You Before Building One</h2>
+
+      <p>
+        <strong>Don't auto-store everything.</strong> My first version dumped
+        every conversation into memory. Within a week: 90% noise. Now, the
+        AI suggests memories at natural breakpoints, and I approve or reject.
+        Explicit control over what enters the sidecar made all the difference.
+      </p>
+
+      <p>
+        <strong>Scope everything.</strong> Memories without context are useless
+        six months later. Every entry gets a scope tag: is this about me, my
+        current project, a procedure, or a career insight? The tag determines
+        how it's stored and when it's surfaced.
+      </p>
+
+      <p>
+        <strong>Own your data.</strong> If your memory system is tied to a
+        vendor or a single platform, it's not really yours. The entire
+        export is one ZIP file : text memories, graph structure, config.
+        Vectors regenerate on import.
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── Research ────────────────────────────────────────── -->
+      <h2>Beyond the Sidecar</h2>
+
+      <p>
+        This started as a weekend project. It's turning into something
+        bigger. A few threads I'm pulling on:
+      </p>
+
+      <ul>
+        <li>Formalizing the cognitive memory taxonomy for AI systems</li>
+        <li>Cross-session behavioral insight extraction with validation</li>
+        <li>Multi-user studies: does explicit curation scale?</li>
+        <li>Integration with team-level knowledge management</li>
+      </ul>
+
+      <p>
+        A more formal writeup is in the works. Watch this space.
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- ─── Closing ─────────────────────────────────────────── -->
+      <p>
+        Whether you're building AI-augmented developer tools, thinking about
+        persistent memory for your team, or just tired of losing context
+        every Monday: I'd like to hear from you.
+      </p>
+
+      <p>
+        Built with purpose, not with frameworks.
+      </p>
+
+    </article>
+  </main>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer class="article-footer" role="contentinfo">
+    <p class="connect-line">
+      If this resonates,
+      <a href="https://www.linkedin.com/in/banibrata/" target="_blank" rel="noreferrer">let's connect</a>.
+    </p>
+    <p>&copy; <span id="year"></span> Banibrata · Built as a personal project, not a product.</p>
+  </footer>
+
+  <script src="../shared/app.js" defer></script>
+  <script>
+    window.BLOG_TELEMETRY_CONFIG = {
+      proxyUrl:    'https://uplift-telemetry-fn.azurewebsites.net/api/track',
+      blogSlug:    'cognitive-sidecar',
+      blogTitle:   'Cognitive Sidecar : Your AI Assistant\'s Long-Term Memory',
+      environment: 'production'
+    };
+  </script>
+  <script src="../shared/app-insights.js" defer></script>
+</body>
+</html>
