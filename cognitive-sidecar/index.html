@@ -136,14 +136,19 @@
 
       <p>
         The system is simple: three components, each with a
-        clear job, connected through standard APIs.
+        clear job, connected through standard APIs. The orchestration layer
+        is <a href="https://github.com/mem0ai/mem0" target="_blank" rel="noreferrer">mem0</a>,
+        an open-source memory framework. Storage is Postgres with pgvector
+        for embeddings and Neo4j for the knowledge graph. All self-hosted.
       </p>
 
       <h3>Semantic Memory</h3>
       <p>
-        The first layer stores text memories as vector embeddings. Search by
-        meaning: "what do I know about identity-based auth?" finds related
-        memories across projects. Currently I have <strong>148 curated
+        The first layer stores text memories as vector embeddings in
+        Postgres + pgvector. Search by meaning: "what do I know about
+        identity-based auth?" finds related memories across projects.
+        mem0 handles the orchestration, ingestion, deduplication,
+        and retrieval. Currently I have <strong>148 curated
         memories</strong>.
       </p>
 
@@ -285,7 +290,7 @@
       <p>
         Whether you're building AI-augmented developer tools, thinking about
         persistent memory for your team, or just tired of losing context
-        every Monday — I'd like to hear from you. And yes, you have full
+        every Monday; I'd like to hear from you. And yes, you have full
         control: every memory is visible, editable, and deletable. Nothing
         enters the system without your explicit approval.
       </p>
