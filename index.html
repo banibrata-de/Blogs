@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banibrata De | Blog</title>
+  <meta name="description" content="Writing about AI systems, agent memory, and applied machine learning." />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://banibrata-de.github.io/Blogs/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Banibrata De | Blog" />
+  <meta property="og:description" content="Writing about AI systems, agent memory, and applied machine learning." />
+  <meta property="og:url" content="https://banibrata-de.github.io/Blogs/" />
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a2e;
+      --text-secondary: #555;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --border: #e5e7eb;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f1a;
+        --surface: #1a1a2e;
+        --text: #e8e8f0;
+        --text-secondary: #a0a0b0;
+        --accent: #818cf8;
+        --accent-hover: #a5b4fc;
+        --border: #2a2a3e;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .posts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .post-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .post-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+    }
+
+    .post-card h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .post-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .post-meta {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      opacity: 0.8;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Banibrata De</h1>
+      <p class="subtitle">Writing about AI systems, agent memory, and applied machine learning.</p>
+    </header>
+
+    <section class="posts">
+      <a class="post-card" href="./cognitive-sidecar/">
+        <h2>Cognitive Sidecar: Your AI Assistant's Long-Term Memory</h2>
+        <p>How I built a portable, self-hosted memory service that maps to human cognitive architecture and what it taught me about my own engineering patterns.</p>
+        <span class="post-meta">April 2026 · 5 min read</span>
+      </a>
+
+      <a class="post-card" href="./uplift/">
+        <h2>Uplift: Observable Learning Through Multimodal AI</h2>
+        <p>A system that turns learning sessions into structured feedback loops: capturing speech and multimodal signals, generating shareable reports, and making reflection easier.</p>
+        <span class="post-meta">March 2026 · 4 min read</span>
+      </a>
+    </section>
+
+    <footer>
+      <p><a href="https://www.linkedin.com/in/banibrata/">LinkedIn</a> · <a href="https://github.com/banibrata-de">GitHub</a></p>
+      <p>&copy; 2026 Banibrata De</p>
+    </footer>
+  </div>
+
+</body>
+</html>
